@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { useSelector, useDispatch } from "react-redux";
+import ClipLoader from "react-spinners/ClipLoader";
+
+import "./assets/css/App.css";
+
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import "bootstrap-css-only/css/bootstrap.min.css";
+import "mdbreact/dist/css/mdb.css";
+
+import STLRouter from "./routes/router";
+import { verifyTokenAsync } from "./actions/auth-async.action";
+import { Row } from "react-bootstrap";
+
+export default function App() {
+    const auth_obj = useSelector((state) => state.auth);
+    const dispatch = useDispatch();
+
+    const { authLoading } = auth_obj;
+
+    useEffect(() => {
+        dispatch(verifyTokenAsync());
+    }, [dispatch]);
+
+    if (authLoading) {
+        return (
+            <Row className="vh-100">
+                <ClipLoader
+                    css="margin: auto;"
+                    size={100}
+                    color={"#ff0000"}
+                    loading={authLoading}
+                />
+            </Row>
+        );
+    }
+    return <STLRouter />;
 }
-
-export default App;

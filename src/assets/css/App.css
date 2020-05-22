@@ -1,0 +1,43 @@
+#responsive-navbar-nav .dropdown-toggle {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#responsive-navbar-nav .dropdown-toggle:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+.fileContainer .uploadPictureContainer {
+    width: 100% !important;
+}
+
+.dropdown-menu.show {
+    width: calc(100% - .75rem);
+    margin: .375rem !important;
+    margin-top: -.375rem !important;
+}
+
+.dropdown-menu.show a:hover {
+    background-color: #ff3547 !important;
+    color: white !important;
+}
+
+a {
+    font-weight: 400 !important;
+}
+
+table td {
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+}
+
+table.table a {
+    color: #007bff !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+}
+
+input {
+    color: black !important;
+}
