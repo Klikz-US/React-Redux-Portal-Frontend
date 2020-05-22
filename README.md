@@ -1,4 +1,18 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Portal Frontend
+
+## Tech Stack
+* React
+* Redux
+* Express
+* Node
+* MongoDB
+
+## Module Implementations
+* User Management System. (User registration, Login, Token verification)
+* Portal (Admin, Moderator, Rep.) - Different Access for each role
+* Reusable components. (APIs services, Actions, Utils, Pages, Redux reducers)
+* Node.js Backend - API, MongoDB management, Token Authentication
+* Forever service module enabled for Backend deployment.
 
 ## Available Scripts
 
