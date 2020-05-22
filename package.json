@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
     "country-state-city": "^1.0.4",
+    "dotenv": "^8.2.0",
     "formik": "^2.1.4",
     "mdbreact": "^4.26.1",
     "moment": "^2.26.0",
